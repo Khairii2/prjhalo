@@ -3,6 +3,6 @@ using namespace std;
 
 int main() {
   cout << "Poliban Juara";
-  cout << "Indonesia Hebat"
+  cout << "Indonesia Hebat";
   return 0;
 }

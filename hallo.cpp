@@ -4,25 +4,35 @@ using namespace std;
 
 int main() 
 {
-    string nama[5];  //inisialisasi array string untuk menampung 5 nama
-                 
-    //memasukkan data 5 buah nama ke dalam array string
-    cout << "Silahkan Masukkan 5 Nama:\n";
-    for (int i = 0; i < 5; i++) 
+    //modifikasi kode program agar menerima masukan jumlah nama yang akan di proses 
+    int jumlahNama;
+    string nama[100]; 
+
+    cout << "Masukkan Jumlah Nama: ";
+    cin >> jumlahNama;
+    cin.ignore(); 
+
+    cout << endl;
+
+    cout << "Silahkan Masukkan Nama:\n";
+    for (int i = 0; i < jumlahNama; i++) 
     {
         cout << "Nama ke-" << i + 1 << ": ";
         getline(cin, nama[i]);
     }
-    
-    //menampilkan data pada array
-    cout << "\n======== DAFTAR NAMA ========\n";
-    for (int i = 0; i < 5; i++) 
+
+    cout << "\n========================================\n";
+    cout << "           DAFTAR NAMA PESERTA        \n";
+    cout << "========================================\n";
+    for (int i = 0; i < jumlahNama; i++) 
     {
-        cout << i + 1 << ". " << nama[i] << " " << endl;
+        cout << i + 1 << ". " << nama[i] << endl;
     }
+    
+    cout << "----------------------------------------\n";
+    cout << "      Total Nama yang Dimasukkan: " << jumlahNama << endl;
+    cout << "             Terima kasih!\n";
+    cout << "----------------------------------------\n";
 
-   cout << "\nMantap! Total ada " << 5 << " nama yang berhasil disimpan.\n";
-   cout << "Terima kasih sudah memasukkan data\n";
-
-   return 0;
+    return 0;
 }
